@@ -240,8 +240,8 @@ function Home({ setIsLoggedIn }) {
         console.log("Transcription final result:", finalTranscript);
         // Skywayのデータストリームで送信
         if (localDataStreamRef.current && me) {
-          const result = `translate_data_web:${finalTranscript}`;
-          const URL2 = URL + apiKey + "&q="+encodeURI(finalTranscript)+"&source="+'ja'+"&target="+'en';
+          //const result = `translate_data_web:${finalTranscript}`; 
+          const URL2 = URL + apiKey + "&q="+encodeURI(finalTranscript)+"&source="+'ja'+"&target="+'en';  // eslint-disable-line
           let xhr = new XMLHttpRequest()
           xhr.open('POST', [URL2], false)
           xhr.send();
